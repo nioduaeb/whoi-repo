@@ -1,0 +1,29 @@
+---
+title: "data_wrangling"
+author: "Dave"
+date: "10/22/2018"
+output: html_document
+
+
+```{r}
+library(tidyverse)  #install.packages("tidyverse")
+```
+
+```{r}
+## read gapminder csv. Note the readr:: prefix identifies which package it's in
+gapminder <- readr::read_csv('https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/gapminder.csv')
+```
+```{r}
+gapminder
+head(gapminder)
+tail(gapminder)
+
+str(gapminder)
+summary(gapminder)
+
+names(gapminder)
+dim(gapminder)
+c(nrow(gapminder), ncol(gapminder))
+
+```
+
