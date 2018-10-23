@@ -72,6 +72,25 @@ gapminder %>%
 select(-continent, -lifeExp) %>% 
 filter(country == "Vietnam") %>% 
 mutate(gdp   =pop*gdpPercap,
-max_gdp = max(gdp))
+max_gdp = max(gdp)) 
+```
+```{r}
+gapminder %>% 
+group_by(country) %>%
+mutate(gdp = pop * gdpPercap) %>%
+summarize(max_gdp = max(gdp)) %>%
+ungroup()
+
 
 ```
+```{r}
+gapminder %>%
+  group_by(country) %>%
+  mutate(gdp = pop * gdpPercap) %>%
+  summarize(max_gdp = max(gdp)) %>%
+  ungroup()
+  
+```
+
+
+
